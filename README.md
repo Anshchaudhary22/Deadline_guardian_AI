@@ -24,7 +24,7 @@ The system focuses on simplifying task management with a clean interface and str
 
 ##  Tech Stack
 
-- Language: Java  
+- Language: Java Script,HTML,CSS 
 - Concepts Used: OOP (Object-Oriented Programming), Collections Framework  
 - Data Handling: File Handling (FileReader, FileWriter)  
 - Tools: VS Code , GitHub
