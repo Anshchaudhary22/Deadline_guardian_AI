@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Deadline Guardian AI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🚀 Deadline Guardian AI
+        </div>
+
+        <button id="themeToggle">
+            🌙 Theme
+        </button>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <h1>Never Miss A Deadline Again</h1>
+
+        <p>
+            AI-powered productivity companion that predicts risks,
+            prioritizes work and creates rescue plans before deadlines are missed.
+        </p>
+
+        <div id="alertBanner"></div>
+
+    </section>
+
+    <!-- MAIN STATS -->
+
+    <section class="stats">
+
+        <div class="stat-card">
+            <h2 id="totalTasks">0</h2>
+            <p>Total Tasks</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="highRiskTasks">0</h2>
+            <p>High Risk</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="completedTasks">0</h2>
+            <p>Completed</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="productivityScore">0</h2>
+            <p>Productivity Score</p>
+        </div>
+
+    </section>
+
+    <!-- GAMIFICATION STATS -->
+
+    <section class="stats">
+
+        <div class="stat-card">
+            <h2 id="xpPoints">0</h2>
+            <p>XP Points</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="userLevel">Beginner</h2>
+            <p>Current Level</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="streakDays">0</h2>
+            <p>Streak Days</p>
+        </div>
+
+    </section>
+
+    <!-- DASHBOARD -->
+
+    <div class="dashboard">
+
+        <!-- ADD TASK -->
+
+        <div class="card">
+
+            <h2>➕ Add Task</h2>
+
+            <input
+                id="taskName"
+                placeholder="Task Name">
+
+            <input
+                id="taskHours"
+                type="number"
+                placeholder="Estimated Hours">
+
+            <input
+                id="taskImportance"
+                type="number"
+                min="1"
+                max="10"
+                placeholder="Importance (1-10)">
+
+            <input
+                id="taskDeadline"
+                type="date">
+
+            <button onclick="addTask()">
+                Add Task
+            </button>
+
+            <button onclick="startVoice()">
+                🎤 Voice Input
+            </button>
+
+        </div>
+
+        <!-- TASK LIST -->
+
+        <div class="card">
+
+            <h2>📋 Smart Priorities</h2>
+
+            <div id="taskList"></div>
+
+        </div>
+
+        <!-- RISK -->
+
+        <div class="card">
+
+            <h2>⚠ Risk Predictor</h2>
+
+            <div id="riskList"></div>
+
+        </div>
+
+        <!-- AI PLANNER -->
+
+        <div class="card">
+
+            <h2>📅 AI Planner</h2>
+
+            <button onclick="generatePlanner()">
+                Generate Plan
+            </button>
+
+            <button onclick="downloadReport()">
+                📄 Download Report
+            </button>
+
+            <div id="plannerOutput"></div>
+
+        </div>
+
+        <!-- RESCUE MODE -->
+
+        <div class="card">
+
+            <h2>🆘 Rescue Mode</h2>
+
+            <button onclick="generateRescuePlan()">
+                Activate Rescue Plan
+            </button>
+
+            <div id="rescueOutput"></div>
+
+        </div>
+
+        <!-- RECOMMENDATIONS -->
+
+        <div class="card">
+
+            <h2>🧠 AI Recommendations</h2>
+
+            <div id="recommendations"></div>
+
+        </div>
+
+        <!-- ANALYTICS -->
+
+        <div class="card analytics-card">
+
+            <h2>📊 Productivity Analytics</h2>
+
+            <canvas id="analyticsChart"></canvas>
+
+        </div>
+
+    </div>
+
+    <!-- AI CHATBOT -->
+
+    <div class="chatbot">
+
+        <div class="chat-header">
+            🤖 Guardian AI Assistant
+        </div>
+
+        <div id="chatMessages"></div>
+
+        <input
+            id="chatInput"
+            placeholder="Ask Guardian AI...">
+
+        <button onclick="sendMessage()">
+            Send
+        </button>
+
+    </div>
+
+    <!-- TOAST -->
+
+    <div id="toast"></div>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        🚀 Built For Vibe2Ship Hackathon
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
