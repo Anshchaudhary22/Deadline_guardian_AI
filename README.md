@@ -29,9 +29,6 @@ The system focuses on simplifying task management with a clean interface and str
 - Data Handling: File Handling (FileReader, FileWriter)  
 - Tools: VS Code , GitHub
 
-## Output
+
+##  Project Structure
 ![Project Output](screenshots/output.png)
-
-
-
-## 📂 Project Structure
