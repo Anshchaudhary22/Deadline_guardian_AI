@@ -31,4 +31,4 @@ The system focuses on simplifying task management with a clean interface and str
 
 
 ##  Project Structure
-![Project Output](screenshots/output.png)
+![Project Output](screenshots/output.png.png)
