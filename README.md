@@ -30,5 +30,4 @@ The system focuses on simplifying task management with a clean interface and str
 - Tools: VS Code , GitHub
 
 
-##  Project Structure
-![Project Output](screenshots/output.png.png)
+
